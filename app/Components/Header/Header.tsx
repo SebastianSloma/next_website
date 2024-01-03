@@ -5,6 +5,7 @@ import Image from 'next/image';
 import logo from '../../../public/images/logo.png';
 import Button from '../Button/Button';
 import styled from 'styled-components';
+import { FaRegHandPointer } from "react-icons/fa";
 
 function Header() {
 	return (
@@ -30,7 +31,7 @@ function Header() {
 					<li>
 						<a href='#'>About</a>
 					</li>
-					<Button name={'Push button'} />
+					<Button name='Push button' icon={<FaRegHandPointer/>}/>
 				</ul>
 			</nav>
 		</HeaderStyled>
