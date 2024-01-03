@@ -11,6 +11,21 @@ function Header() {
             <div className='logo'>
                 <Image src={logo} alt='logo' width={40} />
                 <h2>Logo</h2>
+                <ul className='nav-items'>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Section</a>
+                    </li>
+                    <li>
+                        <a href="#">Section two</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+
+                </ul>
             </div>
         </nav>
     </div>
