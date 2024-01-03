@@ -30,7 +30,7 @@ function Header() {
 					<li>
 						<a href='#'>About</a>
 					</li>
-					<Button />
+					<Button name={''} />
 				</ul>
 			</nav>
 		</HeaderStyled>
