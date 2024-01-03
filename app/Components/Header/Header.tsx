@@ -59,6 +59,17 @@ function Header() {
                     <Button name='Read More'/>
                     </div>
 				</div>
+                <div className='image-content'>
+                    <div className='image'>
+                        <Image src='/images/anton.jpeg'
+                        alt='hero'
+                        width={600}
+                        height={600}
+                        />
+
+                    </div>
+
+                </div>
 			</div>
 		</HeaderStyled>
 	);
