@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import logo from '../../../public/images/logo.png';
 import Button from '../Button/Button';
@@ -8,15 +8,32 @@ import styled from 'styled-components';
 import { FaRegHandPointer } from 'react-icons/fa';
 import { MdOutlineRocketLaunch } from 'react-icons/md';
 import { Abril_Fatface } from 'next/font/google';
+import hover3d from '../../utils/hover'
 
 const abril = Abril_Fatface({
 	subsets: ['latin'],
 	weight: ['400'],
 });
 
+
+
 function Header() {
+	const hero = useRef<HTMLDivElement>(null);
+
+	const hoverHero = hover3d(hero, {
+	  x: 30,
+	  y: -40,
+	  z: 30,
+	});
+  
+	const imageHover = hover3d(hero, {
+	  x: 20,
+	  y: -5,
+	  z: 11,
+	});
+  
 	return (
-		<HeaderStyled>
+		<HeaderStyled ref={hero}>
 			<nav>
 				<div className='logo'>
 					<Image src={logo} alt='logo' width={40} />
@@ -61,12 +78,17 @@ function Header() {
 					</div>
 				</div>
 				<div className='image-content'>
-					<div className='image'>
+					<div className='image'  style={{
+              transform: hoverHero.transform,
+            }}>
 						<Image
 							src='/images/anton.jpeg'
 							alt='hero'
-							width={600}
-							height={600}
+							width={550}
+							height={550}
+							style={{
+								transform: imageHover.transform,
+							  }}
 						/>
 					</div>
 				</div>
@@ -123,7 +145,7 @@ const HeaderStyled = styled.header`
   }
 
   .header-content {
-    padding: 0 10rem 5rem 10rem;
+    padding: 1rem 10rem 5rem 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -153,6 +175,7 @@ const HeaderStyled = styled.header`
 
       img {
         border-radius: 8px;
+
       }
     }
   }
