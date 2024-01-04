@@ -1,3 +1,4 @@
+'use client'
 import styled from 'styled-components';
 import Header from './Components/Header/Header';
 import SectionLayout from './Components/SectionLayout';
@@ -7,7 +8,7 @@ export default function Home() {
 		<>
 			<Header />
 			<MainStyled>
-				<SectionLayout>
+				<SectionLayout children={undefined}>
 					
 				</SectionLayout>
 			</MainStyled>
