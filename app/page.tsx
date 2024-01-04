@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<Header />
 			<MainStyled>
-				<SectionLayout children={undefined}>
+				<SectionLayout>
 					
 				</SectionLayout>
 			</MainStyled>
