@@ -1,9 +1,11 @@
 'use client';
+
 import styled from 'styled-components';
 import Header from './Components/Header/Header';
 import SectionLayout from './Components/SectionLayout';
 import Card from './Components/Card';
 import { cards } from './utils/cards';
+import FullPage from './Components/FullPage';
 
 export default function Home() {
 	return (
@@ -13,10 +15,29 @@ export default function Home() {
 				<SectionLayout>
 					<div className='cards'>
 						{cards.map((card, index) => {
-							return <Card key={index}
-							title={card.title}
-							description={card.description}
-							image={card.image} />;
+							return (
+								<Card
+									key={index}
+									title={card.title}
+									description={card.description}
+									image={card.image}
+								/>
+							);
+						})}
+					</div>
+				</SectionLayout>
+				<FullPage />
+				<SectionLayout>
+					<div className='cards'>
+						{cards.map((card, index) => {
+							return (
+								<Card
+									key={index}
+									title={card.title}
+									description={card.description}
+									image={card.image}
+								/>
+							);
 						})}
 					</div>
 				</SectionLayout>
@@ -30,9 +51,8 @@ const MainStyled = styled.main`
 	width: 100%;
 
 	.cards {
-		position: absolute;
 		display: grid;
 		grid-template-columns: repeat(5, 30rem);
 		gap: 4rem;
-	  }
+	}
 `;

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const FullPage = () => {
   return (
-    <div>
+    <FullPageStyled>
         <div className="image">
             <Image 
             src='/images/andrea.jpeg'
@@ -16,7 +16,7 @@ const FullPage = () => {
             }}
             />
         </div>
-    </div>
+    </FullPageStyled>
   )
 }
 
