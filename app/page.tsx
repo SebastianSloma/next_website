@@ -7,6 +7,7 @@ import Card from './Components/Card';
 import { cards } from './utils/cards';
 import FullPage from './Components/FullPage';
 import TextSection from './TextSection';
+import Footer from './Components/Footer';
 
 export default function Home() {
 	return (
@@ -60,6 +61,8 @@ export default function Home() {
 				<SectionLayout>
 					<TextSection />
 				</SectionLayout>
+
+				<Footer/>
 			</MainStyled>
 		</>
 	);
