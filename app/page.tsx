@@ -56,6 +56,10 @@ export default function Home() {
 							allowFullScreen></iframe>
 					</div>
 				</SectionLayout>
+
+				<SectionLayout>
+					<TextSection />
+				</SectionLayout>
 			</MainStyled>
 		</>
 	);
