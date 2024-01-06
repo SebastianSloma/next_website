@@ -44,7 +44,17 @@ export default function Home() {
 				</SectionLayout>
 
 				<SectionLayout>
-					<TextSection/>
+					<TextSection />
+				</SectionLayout>
+
+				<SectionLayout>
+					<div className='video'>
+						<iframe
+							src='https://www.youtube.com/watch?v=JS5iRAxJ-0M'
+							title='YouTube video player'
+							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+							allowFullScreen></iframe>
+					</div>
 				</SectionLayout>
 			</MainStyled>
 		</>
@@ -59,5 +69,16 @@ const MainStyled = styled.main`
 		display: grid;
 		grid-template-columns: repeat(5, 30rem);
 		gap: 4rem;
+	}
+
+	.video {
+		padding: 2rem;
+		background-color: #161616;
+		border-radius: 1rem;
+		iframe {
+			border: none;
+			width: 100%;
+			height: 52rem;
+		}
 	}
 `;
