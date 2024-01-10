@@ -9,6 +9,7 @@ import FullPage from './Components/FullPage';
 import TextSection from './TextSection';
 import Footer from './Components/Footer';
 import ZoomSection from './Components/ZoomSection';
+import HorizontalWrapper from './Components/HorizontalWrapper';
 
 export default function Home() {
 	return (
@@ -16,20 +17,24 @@ export default function Home() {
 			<Header />
 			<MainStyled>
 				<SectionLayout>
-					<div className='cards'>
-						{cards.map((card, index) => {
-							return (
-								<Card
-									key={index}
-									title={card.title}
-									description={card.description}
-									image={card.image}
-								/>
-							);
-						})}
-					</div>
+					<HorizontalWrapper height='40rem' direction={-1400}>
+						<div className='cards'>
+							{cards.map((card, index) => {
+								return (
+									<Card
+										key={index}
+										title={card.title}
+										description={card.description}
+										image={card.image}
+									/>
+								);
+							})}
+						</div>
+					</HorizontalWrapper>
 				</SectionLayout>
+
 				<FullPage />
+
 				<SectionLayout>
 					<div className='cards'>
 						{cards.map((card, index) => {
@@ -64,10 +69,10 @@ export default function Home() {
 				</SectionLayout>
 
 				<SectionLayout>
-					<ZoomSection/>
+					<ZoomSection />
 				</SectionLayout>
 
-				<Footer/>
+				<Footer />
 			</MainStyled>
 		</>
 	);
@@ -78,6 +83,7 @@ const MainStyled = styled.main`
 	width: 100%;
 
 	.cards {
+		position: absolute;
 		display: grid;
 		grid-template-columns: repeat(5, 30rem);
 		gap: 4rem;
