@@ -36,18 +36,20 @@ export default function Home() {
 				<FullPage />
 
 				<SectionLayout>
-					<div className='cards'>
-						{cards.map((card, index) => {
-							return (
-								<Card
-									key={index}
-									title={card.title}
-									description={card.description}
-									image={card.image}
-								/>
-							);
-						})}
-					</div>
+					<HorizontalWrapper height='40rem' direction={-1400}>
+						<div className='cards' style={{ right: 0 }}>
+							{cards.map((card, index) => {
+								return (
+									<Card
+										key={index}
+										title={card.title}
+										description={card.description}
+										image={card.image}
+									/>
+								);
+							})}
+						</div>
+					</HorizontalWrapper>
 				</SectionLayout>
 
 				<SectionLayout>
